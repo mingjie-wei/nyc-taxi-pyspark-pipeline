@@ -54,13 +54,16 @@ Build an end-to-end Spark pipeline on Databricks that:
 Turn raw trips into a small summarized table for downstream analysis.
 
 ![agg1](docs/agg1.png)
+
+Write results as Parquet:
+
 ![agg2](docs/agg2.png)
 
-- Read-back validation
+Read-back validation
 
-    - Row count parity: spark.read.parquet(OUT).count()
+- Row count parity: spark.read.parquet(OUT).count()
 
-    - Partition pruning: spark.read.parquet(OUT).where("year=2019 AND month BETWEEN 9 AND 12")
+- Partition pruning: spark.read.parquet(OUT).where("year=2019 AND month BETWEEN 9 AND 12")
 
 ### SQL queries
 ![sql](docs/SQL.png)
