@@ -118,6 +118,9 @@ Turn raw trips into a small summarized table for downstream analysis.
     - Write partitioned by (year, month) so reads can prune partitions.
 
 ## Actions vs Transformations
+
+These screenshots demonstrate Spark’s lazy evaluation: transformations only build a plan; actions (e.g., count(), show()) actually run the plan and appear in Query Details as executed jobs.
+
 ![action1](docs/action1.png)
 ![action2](docs/action2.png)
 
